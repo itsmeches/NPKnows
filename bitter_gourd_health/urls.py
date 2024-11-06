@@ -19,26 +19,13 @@ from django.contrib import admin
 from django.urls import path, include  # 'include' is imported for future usage if needed
 from api.views import ImageView, UserRegistrationView, LoginView  # Update to use LoginView
 
-
-
-
-# project/urls.py
-from django.contrib import admin
-from django.urls import path
-from api.views import ImageView, UserRegistrationView, LoginView  # Ensure you have the correct imports
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
-    # Endpoint for image upload and prediction
-    path('api/image/', ImageView.as_view(), name='image_view'),  
-    
-    # Optional: If you want a separate endpoint for prediction only
-    # If both 'image/' and 'predict/' serve the same purpose, consider removing one
-    path('api/predict/', ImageView.as_view(), name='predict_view'),  
-    
-    # User registration and login endpoints
-    path('api/register/', UserRegistrationView.as_view(), name='register'),  
-    path('api/login/', LoginView.as_view(), name='login'),  
+    path('api/', include('api.urls')),  # Include all API endpoints under the /api/ path
+    # Grouping API endpoints under a single path prefix (api/)
+    path('api/register/', UserRegistrationView.as_view(), name='register'),
+    path('api/login/', LoginView.as_view(), name='login'),
+    path('api/image/', ImageView.as_view(), name='image_view'),  # Image upload and prediction endpoint
+    path('api/predict/', ImageView.as_view(), name='predict_view'), 
+    # Optional alternative prediction endpoint
 ]
-

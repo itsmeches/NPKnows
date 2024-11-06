@@ -44,18 +44,33 @@ class UserRegistrationView(APIView):
     """API view for user registration."""
     def post(self, request):
         username = request.data.get('username')
+        email = request.data.get('email')
         password = request.data.get('password')
 
-        if not username or not password:
-            return Response({'error': 'Please provide both username and password'}, status=status.HTTP_400_BAD_REQUEST)
+        # Check required fields
+        if not username or not email or not password:
+            return Response({'error': 'Username, email, and password are required.'}, status=status.HTTP_400_BAD_REQUEST)
 
+        # Check for existing username or email
         if User.objects.filter(username=username).exists():
             return Response({'error': 'Username is already taken'}, status=status.HTTP_400_BAD_REQUEST)
+        if User.objects.filter(email=email).exists():
+            return Response({'error': 'Email is already registered'}, status=status.HTTP_400_BAD_REQUEST)
 
-        user = User.objects.create_user(username=username, password=password)
-        token, _ = Token.objects.get_or_create(user=user)
+        # Create the user as a regular user (not admin or staff)
+        try:
+            user = User.objects.create_user(username=username, email=email, password=password)
+            user.is_staff = False
+            user.is_superuser = False
+            user.save()
 
-        return Response({'message': 'User registered successfully', 'token': token.key}, status=status.HTTP_201_CREATED)
+            # Generate a token for the new user
+            token, _ = Token.objects.get_or_create(user=user)
+
+            return Response({'message': 'User registered successfully', 'token': token.key}, status=status.HTTP_201_CREATED)
+
+        except Exception as e:
+            return Response({'error': f'An error occurred: {str(e)}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class LoginView(APIView):
     """API view for user login."""
