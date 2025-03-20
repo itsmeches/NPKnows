@@ -1,0 +1,169 @@
+/* General container */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4fc646, #28a745);
+    padding: 20px;
+}
+
+/* Login box */
+.login-box {
+    width: 100%;
+    max-width: 380px;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-box:hover {
+    transform: translateY(-3px);
+}
+
+/* Logo and header */
+.login-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.login-logo {
+    width: 50px;
+    height: auto;
+}
+
+.login-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4fc646;
+}
+
+/* Subtext */
+h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-subtext {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+.input-container {
+    margin: 12px 0;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+.input-container input:focus {
+    border-color: #4fc646;
+    outline: none;
+}
+
+/* Remember me & Forgot password */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.remember-forgot a {
+    text-decoration: none;
+    color: #4fc646;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #4fc646;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-login:hover {
+    background: #28a745;
+    transform: translateY(-2px);
+}
+
+/* Error message */
+.error-message {
+    color: #d9534f;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Register link */
+.register-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: #4fc646;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+}
+
+.remember-me-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adjust spacing between checkbox and text */
+}
+
+input[type="checkbox"] {
+    width: 16px; /* Ensures consistent checkbox size */
+    height: 16px;
+    accent-color: green; /* Optional: Matches the theme */
+}
+
+.remember-me-container label {
+    font-size: 14px; /* Adjust text size if needed */
+    cursor: pointer;
+}
+
+body {
+    overflow: hidden; /* Prevent scrolling */
+}

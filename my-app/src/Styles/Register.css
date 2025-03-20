@@ -1,0 +1,135 @@
+/* Register.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Slightly lighter background color */
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #4fc646;
+}
+
+
+.register-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px; /* Slightly more rounded corners */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    width: 100%;
+    max-width: 400px; /* Responsive max-width */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+}
+
+.register-form:hover {
+    transform: translateY(-3px); /* Subtle lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+h2 {
+    font-size: 26px; /* Slightly larger heading */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 20px; /* More spacing between inputs */
+}
+
+input {
+    width: 100%;
+    padding: 12px; /* Increased padding for comfort */
+    margin: 5px 0;
+    box-sizing: border-box;
+    border-radius: 8px; /* More rounded corners for inputs */
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus */
+}
+
+input:focus {
+    border-color: #4fc646; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Add glow effect */
+}
+
+.btn-register {
+    background-color: #4fc646;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add scale effect */
+}
+
+.btn-register:hover {
+    background-color: #65db5c;
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+a {
+    color: #4fc646;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.register-logo-container {
+    display: flex;
+    align-items: center; /* Center logo and text vertically */
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 15px; /* Space below logo container */
+}
+
+.register-logo {
+    width: 42px; /* Slightly larger logo */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.register-logo-text {
+    font-size: 32px; /* Larger logo text */
+    color: #4fc646;
+    font-weight: bold;
+    letter-spacing: 1px; /* Add some spacing for elegance */
+}
+.remember-me-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Spacing between checkbox and text */
+    justify-content: flex-start;
+    margin-bottom: 20px; /* Spacing before the register button */
+}
+
+.remember-me-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4fc646; /* Matches the theme */
+    cursor: pointer;
+}
+
+.remember-me-container label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}

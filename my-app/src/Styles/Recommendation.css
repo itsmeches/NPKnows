@@ -1,0 +1,90 @@
+/* 🌿 General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F7F3E9; /* Muted beige for an organic feel */
+}
+
+/* 🍃 Container */
+.Recommendation-container {
+    max-width: 650px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* 🌱 Title */
+.Recommendation-title {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #1B5E20;
+    margin-bottom: 15px;
+}
+
+/* 🍏 Highlighted Nutrient Combination */
+.nutrient-combination {
+    font-size: 22px; /* Bigger and bolder */
+    font-weight: bold;
+    color: #1B5E20;
+    background: #C8E6C9;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 10px auto;
+    display: inline-block;
+}
+
+/* 📜 Accordion (Dropdowns) */
+.accordion {
+    margin-top: 12px;
+}
+
+/* 📌 Accordion Button */
+/* 🌿 Dropdown Button */
+.accordion-button {
+    cursor: pointer;
+    width: 100%;
+    padding: 12px;
+    background-color: #66BB6A;
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.accordion-button:hover {
+    background-color: #388E3C;
+}
+
+/* 📜 Accordion Content */
+.accordion-content {
+    padding: 14px;
+    background-color: #ECEFF1;
+    border-left: 4px solid #66BB6A;
+    border-radius: 6px;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.5;
+    display: block;
+    max-height: 100%;
+}
+/* ❗ Error Message */
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.highlight-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #388E3C;
+    margin-bottom: 10px;
+}

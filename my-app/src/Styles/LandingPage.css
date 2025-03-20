@@ -1,0 +1,118 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #E8F5E9;
+    color: #333; /* Improves text readability */
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(135deg, #2E7D32 10%, #1B5E20 100%); /* Soft gradient */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 65px;
+    margin-right: 12px;
+}
+
+.navbar-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* NAVBAR LINKS */
+.navbar-links {
+    display: flex;
+    gap: 12px;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+    font-weight: 500;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+    background: #AEEA00;
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+/* LANDING PAGE CONTENT */
+.landing-content {
+    margin-top: 120px; /* Adjust for fixed navbar */
+    text-align: center;
+}
+
+/* LOGIN BUTTON */
+.login-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background: #AEEA00;
+    color: #2E7D32;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.login-button:hover {
+    background: #C5E1A5;
+    transform: scale(1.05);
+}
+
+
+
+/* MODAL */
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    width: 450px;
+    max-width: 95%;
+}
+
+/* OVERLAY */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+}
+
+/* CLOSE BUTTON */
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #2E7D32;
+}
