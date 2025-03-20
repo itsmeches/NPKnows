@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 from .models import ImageModel  # Importing the custom ImageModel defined in models.py
+from .models import FertilizerRecommendation
 
 # Unregister the default User admin to allow for customization
 admin.site.unregister(User)
@@ -28,3 +29,13 @@ class ImageModelAdmin(admin.ModelAdmin):
     search_fields = ('uuid', 'user__username', 'prediction_result')
     
     # Additional customizations can be added here, such as custom actions or further layout modifications
+@admin.register(FertilizerRecommendation)
+class FertilizerRecommendationAdmin(admin.ModelAdmin):
+    # Fields to display in the admin list view
+    list_display = ('nitrogen_level', 'phosphorus_level', 'potassium_level', 'recommended_rate')
+
+    # Filters to quickly sort through different NPK combinations
+    list_filter = ('nitrogen_level', 'phosphorus_level', 'potassium_level')
+
+    # Enable search functionality based on nutrient levels
+    search_fields = ('nitrogen_level', 'phosphorus_level', 'potassium_level')
