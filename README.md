@@ -19,12 +19,12 @@ A full‑stack project that identifies **NPK deficiency signs on bitter gourd (a
 
 **Backend**
 
-* Python, Django (+ Django REST Framework if used)
+* Python + Django REST Framework
 * TensorFlow / Keras
 
 **Frontend**
 
-* React (Create React App or Vite) + Tailwind CSS
+* React + Tailwind CSS
 
 **Other**
 
