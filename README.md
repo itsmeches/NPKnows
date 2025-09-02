@@ -244,7 +244,7 @@ model.save('saved_model.h5')
 * Kyla Jamito
 * Patrick Eva
 
-*(Names based on repo contributors; edit as needed.)*
+
 
 ---
 
